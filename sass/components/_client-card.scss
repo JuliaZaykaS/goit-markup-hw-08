@@ -1,0 +1,21 @@
+.client {
+  .client-link {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+    color: $icon-color;
+
+    border: 1px solid currentColor;
+    border-radius: 4px;
+
+    transition: color $animation-time $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}

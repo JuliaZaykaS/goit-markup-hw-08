@@ -1,0 +1,53 @@
+.footer {
+  background-color: $background-color-footer;
+  & .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  .logo-inverse {
+    margin-bottom: 20px;
+  }
+  .social-link {
+    @extend %social-link;
+    background-color: $icon-footer-background;
+    transition: background-color $animation-time $timing-function;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+    .social-icon {
+      fill: $main-white-color;
+    }
+  }
+}
+
+.address {
+  margin-bottom: 9px;
+  color: $main-white-color;
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.footer-connection {
+  margin-bottom: 9px;
+  .connection {
+    color: $footer-color;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+
+.join,
+.subscribe {
+  margin-top: 12px;
+  .title-inverse {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.connection {
+  color: $main-text-color;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color $animation-time $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

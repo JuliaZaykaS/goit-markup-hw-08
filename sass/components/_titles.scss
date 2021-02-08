@@ -1,0 +1,38 @@
+.title {
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.67;
+  text-align: center;
+}
+
+.advantages-title {
+  color: $title-text-color;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: $title-text-color;
+}
+
+.form-subtitle {
+  color: $main-text-color;
+}
+
+.project-title {
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.title-inverse {
+  color: $background-button-color;
+}

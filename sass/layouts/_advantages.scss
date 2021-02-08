@@ -1,0 +1,12 @@
+.advantages {
+  color: $main-text-color;
+  &-catalog {
+    display: flex;
+  }
+}
+
+.advantage-item {
+  .advantages-catalog &:not(:last-child) {
+    margin-right: 30px;
+  }
+}

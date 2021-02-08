@@ -1,0 +1,23 @@
+.team {
+  background-color: $background-button-color;
+  .title {
+    margin-bottom: 50px;
+  }
+  &-card {
+    background-color: $main-white-color;
+    .members-of-team &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &-member {
+    margin-bottom: 10px;
+  }
+
+  &-specialization {
+    margin-bottom: 16px;
+  }
+}
+
+.members-of-team {
+  display: flex;
+}

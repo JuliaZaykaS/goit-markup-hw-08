@@ -1,0 +1,22 @@
+.advantage-item {
+  width: 270px;
+  .advantages-title {
+    margin-bottom: 10px;
+  }
+}
+
+.advantage-icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  height: 120px;
+  background-color: $background-button-color;
+  border-radius: 4px;
+}
+
+.advantages-text {
+  line-height: 1.71;
+  text-align: left;
+}

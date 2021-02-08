@@ -1,0 +1,19 @@
+.social-network-list {
+  display: flex;
+  justify-content: center;
+  .social-network:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+%social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+
+  transition: color $animation-time $timing-function,
+    background-color $animation-time $timing-function;
+
+  border-radius: 50%;
+  padding: 12px;
+}

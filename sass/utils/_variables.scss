@@ -1,0 +1,33 @@
+/* Палитра */
+$color-grey: #757575;
+$color-black: #212121;
+$color-blue: #2196f3;
+$color-white: #ffffff;
+$color-very-transparent-grey: rgba(255, 255, 255, 0.1);
+$color-transparent-grey: rgba(255, 255, 255, 0.6);
+$color-light-black: #2f303a;
+$color-light-grey: #f5f4fa;
+$color-almost-white: #eeeeee;
+$color-second-almost-white: #ececec;
+$color-dark-grey: rgba(47, 48, 58, 0.4);
+$color-grey-two: #afb1b8;
+
+/* Переменные */
+$main-text-color: $color-grey;
+$title-text-color: $color-black;
+$accent-color: $color-blue;
+$main-white-color: $color-white;
+$footer-color: $color-transparent-grey;
+$background-color-footer: $color-light-black;
+$background-button-color: $color-light-grey;
+$card-border-color: $color-almost-white;
+$section-border-color: $color-second-almost-white;
+$background-gradient: $color-dark-grey;
+$icon-color: $color-grey-two;
+$icon-footer-background: $color-very-transparent-grey;
+
+$main-font-family: Roboto, sans-serif;
+$second-font-family: Raleway, sans-serif;
+
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$animation-time: 250ms;
