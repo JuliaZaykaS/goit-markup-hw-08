@@ -1,7 +1,20 @@
 .advantage-item {
-  width: 270px;
+  width: 450px;
+  margin-bottom: 30px;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
   .advantages-title {
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 }
 
@@ -18,5 +31,4 @@
 
 .advantages-text {
   line-height: 1.71;
-  text-align: left;
 }
