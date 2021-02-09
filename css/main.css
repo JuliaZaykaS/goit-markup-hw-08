@@ -769,30 +769,6 @@ body {
 .team-card {
   background-color: #ffffff;
   margin-bottom: 30px;
-  width: 450px;
-}
-
-@media screen and (min-width: 768px) {
-  .team-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 354px;
-  }
-  .members-of-team .team-card:nth-child(2n + 1) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-card {
-    width: 270px;
-  }
-  .members-of-team .team-card:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
 .team-member {
@@ -803,10 +779,42 @@ body {
   margin-bottom: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .members-of-team {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .members-of-team .team-card:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .members-of-team .team-card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .team-card {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-card {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-card {
+    width: 270px;
+  }
 }
 
 .team-card .social-link {

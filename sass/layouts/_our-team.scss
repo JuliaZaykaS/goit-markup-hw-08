@@ -10,23 +10,6 @@
   &-card {
     background-color: $main-white-color;
     margin-bottom: 30px;
-    width: 450px;
-
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-wrap: wrap;
-      width: 354px;
-      .members-of-team &:nth-child(2n + 1) {
-        margin-right: 30px;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 270px;
-      .members-of-team &:not(:last-child) {
-        margin-right: 30px;
-      }
-    }
   }
   &-member {
     margin-bottom: 10px;
@@ -34,5 +17,22 @@
 
   &-specialization {
     margin-bottom: 16px;
+  }
+}
+
+.members-of-team {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .team-card:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .team-card:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
