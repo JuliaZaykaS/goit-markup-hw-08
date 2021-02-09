@@ -1,7 +1,7 @@
 .form {
   width: 528px;
   padding: 40px;
-  .button-primary {
+  .form-button {
     margin-left: 124px;
     margin-right: 124px;
     letter-spacing: 0.06em;
@@ -123,12 +123,18 @@
 }
 
 .subscribe-form {
-  display: flex;
-  .button-primary {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+  .subscribe-button {
     display: flex;
     align-items: center;
     height: 50px;
     letter-spacing: 0.06em;
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   .send-icon {
     margin-left: 10px;
@@ -141,7 +147,8 @@
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  margin-right: 12px;
+
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1.25;
@@ -151,6 +158,9 @@
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
 }
 
 .form-accent:focus {

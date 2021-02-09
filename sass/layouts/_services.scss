@@ -1,17 +1,21 @@
 .services {
-  z-index: 1;
-  & .list {
-    display: flex;
-  }
-  .title {
-    margin-bottom: 50px;
-  }
-}
+  display: none;
 
-.our-service {
-  display: block;
-  position: relative;
-  .services &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    display: block;
+    z-index: 1;
+    & .list {
+      display: flex;
+    }
+    .title {
+      margin-bottom: 50px;
+    }
+    .our-service {
+      display: block;
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 }

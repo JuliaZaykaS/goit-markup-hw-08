@@ -4,18 +4,18 @@
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -15px;
+      margin: -15px;
     }
   }
 }
 
 .advantage-item {
   @media screen and (min-width: 768px) {
-    margin: 0 15px;
+    margin: 15px;
   }
   .advantages-catalog &:not(:last-child) {
     @media screen and (min-width: 1200px) {
-      margin: 0 15px;
+      margin: 15px;
     }
   }
 }

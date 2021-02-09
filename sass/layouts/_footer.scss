@@ -1,5 +1,6 @@
 .footer {
   background-color: $background-color-footer;
+
   & .container {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -7,8 +8,28 @@
 }
 
 .footer-links {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px), (max-width: 1199 px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .logo-inverse {
     margin-bottom: 20px;
   }
@@ -35,6 +56,7 @@
 
 .footer-connection {
   margin-bottom: 9px;
+
   .connection {
     color: $footer-color;
     font-weight: 400;
@@ -42,6 +64,11 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
   }
+}
+
+.footer-contacts,
+.join {
+  margin-bottom: 60px;
 }
 
 .join,

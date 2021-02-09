@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
@@ -21,42 +21,62 @@
     <!--Шапка страницы-->
     <header class="header">
       <div class="container navigation">
-        <nav class="site-nav">
-          <a class="logo link" href="./index.html"
-            ><span class="logo-path">Web</span>Studio</a
-          >
-          <ul class="list nav-pages">
+        <a class="logo link" href="./index.html"
+          ><span class="logo-path">Web</span>Studio</a
+        >
+        <div class="menu">
+          <nav class="site-nav">
+            <ul class="list nav-pages">
+              <li class="item">
+                <a class="link current" href="./index.html">Студия</a>
+              </li>
+              <li class="item">
+                <a class="link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="item">
+                <a class="link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="list header-connection">
             <li class="item">
-              <a class="link current" href="./index.html">Студия</a>
+              <a class="connection link" href="mailto:info@devstudio.com">
+                <svg class="icon email" width="16" height="12">
+                  <use
+                    href="./images/main/sprite-icons.svg#icon-envelope"
+                  ></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
             <li class="item">
-              <a class="link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="item">
-              <a class="link" href="#">Контакты</a>
+              <a class="connection link" href="tel:+380961111111">
+                <svg class="icon telephone" width="10" height="16">
+                  <use
+                    href="./images/main/sprite-icons.svg#icon-smartphone"
+                  ></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="list header-connection">
-          <li class="item">
-            <a class="connection link" href="mailto:info@devstudio.com">
-              <svg class="icon email" width="16" height="12">
-                <use href="./images/main/sprite-icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
+          <button type="button" class="menu-button" data-menu-button>
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
             >
-          </li>
-          <li class="item">
-            <a class="connection link" href="tel:+380961111111">
-              <svg class="icon telephone" width="10" height="16">
-                <use
-                  href="./images/main/sprite-icons.svg#icon-smartphone"
-                ></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+              <use
+                href="./images/main/sprite-icons.svg#icon-close-menu"
+                class="btn-close-menu"
+              ></use>
+              <use
+                href="./images/main/sprite-icons.svg#icon-mobile-menu"
+                class="btn-mobile-menu"
+              ></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <!--/Шапка страницы-->
@@ -154,7 +174,11 @@
                 >
               </label>
             </div>
-            <button type="submit" value="Отправить" class="button-primary">
+            <button
+              type="submit"
+              value="Отправить"
+              class="button-primary form-button"
+            >
               Отправить
             </button>
           </form>
@@ -273,8 +297,6 @@
                 class="team-foto"
                 src="./images/main/igor-d.jpg"
                 alt="фото Игорь Демьяненко"
-                width="270"
-                height="260"
               />
               <div class="member-content">
                 <h3 class="team-member">Игорь Демьяненко</h3>
@@ -332,8 +354,6 @@
                 class="team-foto"
                 src="./images/main/olga-r.jpg"
                 alt="фото Ольга Репина"
-                width="270"
-                height="260"
               />
               <div class="member-content">
                 <h3 class="team-member">Ольга Репина</h3>
@@ -391,8 +411,6 @@
                 class="team-foto"
                 src="./images/main/nicolay-t.jpg"
                 alt="фото Николай Тарасов"
-                width="270"
-                height="260"
               />
               <div class="member-content">
                 <h3 class="team-member">Николай Тарасов</h3>
@@ -450,8 +468,6 @@
                 class="team-foto"
                 src="./images/main/michail-e.jpg"
                 alt="фото Михаил Ермаков"
-                width="270"
-                height="260"
               />
               <div class="member-content">
                 <h3 class="team-member">Михаил Ермаков</h3>
@@ -655,7 +671,7 @@
                   placeholder="E-mail"
                   class="email-form form-accent"
                 />
-                <button type="submit" class="button-primary">
+                <button type="submit" class="button-primary subscribe-button">
                   Подписаться
                   <svg class="icon send-icon" width="24" height="24">
                     <use href="./images/main/sprite-icons.svg#icon-send"></use>
@@ -670,5 +686,6 @@
     <!--/Подвал с контактами-->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

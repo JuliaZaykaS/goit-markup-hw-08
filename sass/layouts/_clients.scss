@@ -1,12 +1,31 @@
 .clients {
   .title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 }
 
 .regular-clients {
   display: flex;
-  .client:not(:last-child) {
+  flex-wrap: wrap;
+  .client {
+    margin-bottom: 30px;
+  }
+  .client:nth-child(2n + 1) {
     margin-right: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .client:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .client:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
