@@ -1,15 +1,89 @@
-.header-connection {
-  & .item:not(:last-child) {
-    margin-bottom: 64px;
-  }
-  & .item:last-child {
-    margin-bottom: 32px;
-  }
+.navigation {
+  position: relative;
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
 
   @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  .logo {
+    display: block;
+    align-self: center;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
+  }
+}
+
+.menu {
+  @media screen and (max-width: 767px) {
+    height: 796px;
+    background-color: $main-white-color;
+    text-align: start;
+    padding: 48px 40px 0;
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.site-nav {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 302px;
+  }
+}
+
+.nav-pages {
+  & .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    & .item:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
+  }
+}
+
+.header-connection {
+  @media screen and (max-width: 767px) {
+    & .item:not(:last-child) {
+      margin-bottom: 64px;
+    }
+    & .item:last-child {
+      margin-bottom: 32px;
+    }
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
     flex-direction: column;
+    margin-left: auto;
+
     & .item:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -20,6 +94,7 @@
 
   @media screen and (min-width: 1200px) {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-left: auto;
     & .item:not(:last-child) {
@@ -51,68 +126,6 @@
       height: 4px;
       background-color: $accent-color;
       border-radius: 2px;
-    }
-  }
-}
-
-.navigation {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media screen and (min-width: 768px) {
-    height: 100%;
-  }
-
-  .logo {
-    margin-right: 93px;
-    display: block;
-    align-self: center;
-  }
-}
-
-.menu {
-  height: 796px;
-
-  background-color: $main-white-color;
-  text-align: start;
-  padding: 48px 40px 0;
-  @media screen and (max-width: 767px) {
-    height: 100%;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    &.is-open {
-      display: block;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
-
-.site-nav {
-  margin-bottom: 302px;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0;
-  }
-}
-
-.nav-pages {
-  & .item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  @media screen and (min-width: 768px) {
-    display: flex;
-    & .item:not(:last-child) {
-      margin-right: 50px;
     }
   }
 }
@@ -160,6 +173,5 @@
   }
   @media screen and (min-width: 768px) {
     display: none;
-    // position: absolute;
   }
 }
