@@ -266,6 +266,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 99;
   }
   .menu.is-open {
     display: block;
@@ -396,7 +397,7 @@ body {
 }
 
 .menu-button {
-  z-index: 50;
+  z-index: 999;
   width: 40px;
   height: 40px;
   display: -webkit-inline-box;
@@ -797,13 +798,18 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .email-form {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -848,7 +854,6 @@ body {
 .advantage-item {
   width: 450px;
   margin-bottom: 30px;
-  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
@@ -1085,8 +1090,10 @@ body {
   margin-bottom: 30px;
 }
 
-.regular-clients .client:nth-child(2n + 1) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .regular-clients .client:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1146,13 +1153,13 @@ body {
   }
 }
 
-@media screen and (min-width: 768px), (max-width: 1199 px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-links {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1164,6 +1171,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    text-align: start;
   }
 }
 
@@ -1178,6 +1186,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-links .footer-contacts {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .footer-links .logo-inverse {
@@ -1218,19 +1234,29 @@ body {
   letter-spacing: 0.03em;
 }
 
-.footer-contacts,
-.join {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer-contacts,
+  .join {
+    margin-bottom: 60px;
+  }
 }
 
-.join,
-.subscribe {
-  margin-top: 12px;
+@media screen and (min-width: 1200px) {
+  .join,
+  .subscribe {
+    margin-top: 12px;
+  }
 }
 
 .join .title-inverse,
 .subscribe .title-inverse {
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-contacts {
+    margin-right: 165px;
+  }
 }
 
 .filter-button {
@@ -1262,11 +1288,24 @@ body {
 }
 
 .project-card {
+  width: 450px;
   position: relative;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .project-card {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-card {
+    width: 370px;
+  }
 }
 
 .project-card:hover, .project-card:focus {
@@ -1275,8 +1314,14 @@ body {
 }
 
 .project-foto {
+  display: block;
   position: relative;
   overflow: hidden;
+}
+
+.project-foto img {
+  width: 100%;
+  height: 294px;
 }
 
 .project-description {
@@ -1285,10 +1330,22 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  padding: 63px 24px;
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
+  padding: 77px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .project-description {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-description {
+    padding: 63px 24px;
+  }
 }
 
 .project-overlay {
@@ -1312,6 +1369,8 @@ body {
 }
 
 .card-content {
+  width: 100%;
+  height: 110px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -1322,6 +1381,12 @@ body {
   color: #757575;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-content {
+    height: 146px;
+  }
 }
 
 .card-content .project-title {
@@ -1336,30 +1401,71 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-buttons {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-buttons {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .portfolio-buttons .pf-button {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio-buttons .pf-button:not(:last-child) {
   margin-right: 8px;
 }
 
-.projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.projects .project-card {
-  margin-right: 30px;
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .projects .project-card {
+    margin-bottom: 30px;
+  }
 }
 
-.projects .project-card:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .projects .project-card {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .projects .project-card:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects .project-card:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

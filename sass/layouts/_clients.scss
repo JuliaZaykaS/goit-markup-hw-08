@@ -12,11 +12,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   .client {
     margin-bottom: 30px;
   }
-  .client:nth-child(2n + 1) {
-    margin-right: 30px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    .client:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
   }
 
   @media screen and (min-width: 768px) {

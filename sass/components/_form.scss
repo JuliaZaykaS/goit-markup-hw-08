@@ -126,6 +126,7 @@
   @media screen and (min-width: 1200px) {
     display: flex;
   }
+
   .subscribe-button {
     display: flex;
     align-items: center;
@@ -136,6 +137,7 @@
       margin-right: auto;
     }
   }
+
   .send-icon {
     margin-left: 10px;
   }
@@ -148,7 +150,9 @@
   padding-bottom: 15px;
   padding-left: 16px;
 
-  margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
 
   font-size: 16px;
   line-height: 1.25;

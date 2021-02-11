@@ -1,5 +1,16 @@
 .project-card {
+  width: 450px;
+  // height: 404px;
+
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    // height: 440px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 
   transition: box-shadow $animation-time $timing-function;
   &:hover,
@@ -10,8 +21,14 @@
 }
 
 .project-foto {
+  display: block;
+  // width: 100%;
   position: relative;
   overflow: hidden;
+  & img {
+    width: 100%;
+    height: 294px;
+  }
 }
 
 .project-description {
@@ -21,11 +38,18 @@
   top: 0;
   left: 0;
 
-  padding: 63px 24px;
-
   font-size: 18px;
   line-height: 1.56;
   color: $main-white-color;
+
+  padding: 77px 24px;
+
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 }
 
 .project-overlay {
@@ -47,6 +71,8 @@
 }
 
 .card-content {
+  width: 100%;
+  height: 110px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -59,6 +85,11 @@
 
   border: 1px solid $card-border-color;
   border-top: none;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 146px;
+  }
+
   .project-title {
     margin-bottom: 4px;
   }

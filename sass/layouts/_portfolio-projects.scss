@@ -4,21 +4,51 @@
 
 .portfolio-buttons {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  .pf-button:not(:last-child) {
-    margin-right: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .pf-button {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+  // justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .project-card {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    &:nth-child(3n) {
-      margin-right: 0;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+      margin-bottom: 30px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
 }
