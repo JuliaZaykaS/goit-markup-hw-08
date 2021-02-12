@@ -25,13 +25,13 @@
 .form-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: $title-text-color;
-}
 
-.form-subtitle {
-  color: $main-text-color;
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }
 
 .project-title {

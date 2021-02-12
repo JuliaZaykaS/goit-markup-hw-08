@@ -18,6 +18,7 @@
   transition: color $animation-time $timing-function,
     background-color $animation-time $timing-function,
     box-shadow $animation-time $timing-function;
+
   &:hover,
   &:focus {
     outline: none;

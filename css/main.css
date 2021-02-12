@@ -85,13 +85,15 @@ body {
 .form-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: #212121;
 }
 
-.form-subtitle {
-  color: #757575;
+@media screen and (min-width: 1200px) {
+  .form-title {
+    line-height: 1.15;
+  }
 }
 
 .project-title {
@@ -119,19 +121,19 @@ body {
   line-height: 1.16;
 }
 
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
 .logo-path {
   color: #2196f3;
 }
 
 .logo.logo-inverse {
   color: #ffffff;
-}
-
-@media screen and (min-width: 1200px) {
-  .logo {
-    font-size: 26px;
-    line-height: 1.19;
-  }
 }
 
 .nav-pages .link {
@@ -160,12 +162,6 @@ body {
 
 .connection {
   color: #757575;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 500;
   letter-spacing: 0.02em;
   font-size: 24px;
@@ -176,6 +172,12 @@ body {
 
 @media screen and (min-width: 768px) {
   .connection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 12px;
     line-height: 1.16;
   }
@@ -188,30 +190,16 @@ body {
   }
 }
 
-.connection.connection-tel {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
-  color: #2196f3;
-}
-
-@media screen and (min-width: 768px) {
-  .connection.connection-tel {
-    color: #757575;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font: inherit;
-    letter-spacing: 0.02em;
-  }
-}
-
 .connection:hover, .connection:focus {
   color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .connection-tel {
+    font-size: 34px;
+    line-height: 1.18;
+    color: #2196f3;
+  }
 }
 
 .navigation {
@@ -571,12 +559,17 @@ body {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 528px;
-  height: 581px;
+  width: 450px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    width: 528px;
+  }
 }
 
 .is-hidden {
@@ -591,15 +584,21 @@ body {
 }
 
 .form {
-  width: 528px;
   padding: 40px;
 }
 
 .form .form-button {
-  margin-left: 124px;
-  margin-right: 124px;
+  margin-left: 85px;
+  margin-right: 85px;
   letter-spacing: 0.06em;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .form .form-button {
+    margin-left: 124px;
+    margin-right: 124px;
+  }
 }
 
 .form .form-title {
@@ -610,7 +609,7 @@ body {
   margin-bottom: 4px;
 }
 
-.form-item {
+.form .form-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,11 +620,15 @@ body {
   position: relative;
 }
 
-.form-item:not(.form-comment) {
+.form .form-item:not(.form-comment) {
   margin-bottom: 10px;
 }
 
-.form-field {
+.form .form-item.form-comment {
+  margin-bottom: 20px;
+}
+
+.form .form-field {
   padding-left: 42px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -635,11 +638,7 @@ body {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-item.form-comment {
-  margin-bottom: 20px;
-}
-
-.form-label {
+.form .form-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -647,12 +646,23 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 12px;
-  line-height: 1.16;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
 }
 
-.form-icon {
+@media screen and (min-width: 1200px) {
+  .form .form-label {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+.form .form-label .form-subtitle {
+  color: #757575;
+}
+
+.form .form-icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -664,12 +674,12 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:focus + .form-icon {
+.form-field:focus + .form .form-icon {
   fill: #2196f3;
   cursor: pointer;
 }
 
-.comment-field {
+.form .comment-field {
   resize: none;
   min-height: 120px;
   padding: 12px 16px;
@@ -679,65 +689,97 @@ body {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.comment-field::-webkit-input-placeholder {
-  font-size: 12px;
-  line-height: 1.16;
+.form .comment-field::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.comment-field:-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 1.16;
+.form .comment-field:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.comment-field::-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 1.16;
+.form .comment-field::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.comment-field::placeholder {
-  font-size: 12px;
-  line-height: 1.16;
+.form .comment-field::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-agreement {
-  margin-bottom: 30px;
+@media screen and (min-width: 1200px) {
+  .form .comment-field::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  .form .comment-field:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  .form .comment-field::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  .form .comment-field::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 
-.agreement {
+.form .form-agreement {
+  margin-bottom: 31px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form .form-agreement {
+    margin-bottom: 30px;
+  }
+}
+
+.form .agreement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.67;
 }
 
-.agreement-link {
-  display: inline-block;
+@media screen and (min-width: 1200px) {
+  .form .agreement {
+    font-size: 14px;
+    line-height: 1.71;
+    height: 15px;
+  }
+}
+
+.form .agreement-link {
   color: #2196f3;
 }
 
-.agree-checkbox {
+.form .agree-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
 
-.checkbox-icon {
+.form .checkbox-icon {
   display: block;
   width: 16px;
   height: 15px;
-  margin-left: 12px;
   margin-right: 7px;
   border: 2px solid #212121;
   border-radius: 2px;
@@ -745,11 +787,17 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.agree-checkbox:focus + .checkbox-icon {
+@media screen and (min-width: 1200px) {
+  .form .checkbox-icon {
+    margin-left: 12px;
+  }
+}
+
+.agree-checkbox:focus + .form .checkbox-icon {
   border-color: #2196f3;
 }
 
-.agree-checkbox:checked + .checkbox-icon {
+.agree-checkbox:checked + .form .checkbox-icon {
   background-image: url(../images/main/icon-check.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -789,8 +837,8 @@ body {
   margin-left: 10px;
 }
 
-.email-form {
-  width: 358px;
+.subscribe-form .email-form {
+  width: 450px;
   height: 50px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -804,13 +852,14 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .email-form {
+  .subscribe-form .email-form {
     margin-bottom: 20px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .email-form {
+  .subscribe-form .email-form {
+    width: 358px;
     margin-right: 12px;
   }
 }

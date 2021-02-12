@@ -1,6 +1,7 @@
 .social-network-list {
   display: flex;
   justify-content: center;
+
   .social-network:not(:last-child) {
     margin-right: 10px;
   }

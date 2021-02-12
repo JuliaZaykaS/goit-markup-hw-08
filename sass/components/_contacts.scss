@@ -1,38 +1,20 @@
 .connection {
   color: $main-text-color;
-  display: flex;
-  align-items: center;
   font-weight: 500;
   letter-spacing: 0.02em;
-
   font-size: 24px;
   line-height: 1.67;
 
   @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
     font-size: 12px;
     line-height: 1.16;
   }
+
   @media screen and (min-width: $desktop) {
     font-size: 14px;
     line-height: 1.14;
-  }
-
-  &.connection-tel {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-
-    color: $accent-color;
-
-    @media screen and (min-width: $tablet) {
-      color: $main-text-color;
-      display: flex;
-      align-items: center;
-
-      font: inherit;
-      letter-spacing: 0.02em;
-    }
   }
 
   transition: color $animation-time $timing-function;
@@ -40,5 +22,14 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  &-tel {
+    @media screen and (max-width: $tablet - 1) {
+      font-size: 34px;
+      line-height: 1.18;
+
+      color: $accent-color;
+    }
   }
 }
