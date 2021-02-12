@@ -1,18 +1,20 @@
 .team-card {
+  width: 450px;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  width: 450px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: 354px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     width: 270px;
   }
+
   .social-link {
-    @extend %social-link;
+    // @extend %social-link;
     color: $icon-color;
     background-color: $main-white-color;
     &:hover,

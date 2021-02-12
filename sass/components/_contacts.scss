@@ -8,11 +8,11 @@
   font-size: 24px;
   line-height: 1.67;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     font-size: 12px;
     line-height: 1.16;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     font-size: 14px;
     line-height: 1.14;
   }
@@ -25,7 +25,7 @@
 
     color: $accent-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       color: $main-text-color;
       display: flex;
       align-items: center;

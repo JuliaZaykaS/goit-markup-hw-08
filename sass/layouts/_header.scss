@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     justify-content: flex-start;
   }
 
@@ -12,18 +12,18 @@
     display: block;
     align-self: center;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin-right: 88px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-right: 93px;
     }
   }
 }
 
 .menu {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1) {
     height: 796px;
     background-color: $main-white-color;
     text-align: start;
@@ -41,7 +41,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: 100%;
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@
 }
 
 .site-nav {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1) {
     margin-bottom: 302px;
   }
 }
@@ -59,7 +59,7 @@
   & .item:not(:last-child) {
     margin-bottom: 30px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     & .item:not(:last-child) {
       margin-bottom: 0;
@@ -69,7 +69,7 @@
 }
 
 .header-connection {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1) {
     & .item:not(:last-child) {
       margin-bottom: 64px;
     }
@@ -80,7 +80,7 @@
     flex-direction: column-reverse;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -93,7 +93,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -106,7 +106,7 @@
   .email,
   .telephone {
     display: none;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       display: block;
       margin-right: 10px;
     }
@@ -114,7 +114,7 @@
 }
 
 .current {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     position: relative;
 
     &::after {
@@ -144,7 +144,7 @@
     fill: $accent-color;
     outline: none;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
   &.is-open .btn-close-menu {
@@ -172,7 +172,7 @@
 
     color: $accent-color;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }

@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+    width: 210px;
     height: 90px;
     color: $icon-color;
 
@@ -12,6 +12,14 @@
     border-radius: 4px;
 
     transition: color $animation-time $timing-function;
+
+    @media screen and (min-width: $tablet) {
+      width: 226px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 170px;
+    }
 
     &:hover,
     &:focus {

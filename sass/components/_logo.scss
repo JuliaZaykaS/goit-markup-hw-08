@@ -12,7 +12,7 @@
   &.logo-inverse {
     color: $main-white-color;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     font-size: 26px;
     line-height: 1.19;
   }

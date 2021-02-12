@@ -1,34 +1,26 @@
-.clients {
-  .title {
-    margin-bottom: 30px;
-
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 50px;
-    }
-  }
-}
-
 .regular-clients {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
   .client {
-    margin-bottom: 30px;
+    @media screen and (max-width: $desktop - 1) {
+      margin-bottom: 30px;
+    }
   }
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: $mobile) and (max-width: $tablet - 1) {
     .client:nth-child(2n + 1) {
       margin-right: 30px;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     .client:not(:nth-child(3n)) {
       margin-right: 30px;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     .client:not(:last-child) {
       margin-right: 30px;
     }

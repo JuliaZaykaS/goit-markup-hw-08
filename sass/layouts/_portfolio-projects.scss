@@ -7,21 +7,20 @@
   flex-wrap: wrap;
   margin-bottom: 40px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     margin-bottom: 30px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
-  }
-  @media screen and (min-width: 768px) {
     justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
   }
 
   .pf-button {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: $tablet - 1) {
       margin-bottom: 15px;
     }
+
     &:not(:last-child) {
       margin-right: 8px;
     }
@@ -30,22 +29,27 @@
 
 .projects {
   // justify-content: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
   }
   .project-card {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $tablet - 1) {
     }
-    @media screen and (min-width: 768px) {
+
+    @media screen and (min-width: $tablet) {
       margin-right: 30px;
-      margin-bottom: 30px;
-      &:nth-child(2n) {
-        margin-right: 0;
+
+      @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
       }
     }
-    @media screen and (min-width: 1200px) {
+
+    @media screen and (min-width: $desktop) {
       &:nth-child(3n) {
         margin-right: 0;
       }

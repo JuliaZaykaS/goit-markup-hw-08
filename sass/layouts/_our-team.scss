@@ -1,16 +1,14 @@
 .team {
   background-color: $background-button-color;
-  .title {
-    margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 50px;
-    }
-  }
   &-card {
     background-color: $main-white-color;
-    margin-bottom: 30px;
+
+    @media screen and (max-width: $desktop - 1) {
+      margin-bottom: 30px;
+    }
   }
+
   &-member {
     margin-bottom: 10px;
   }
@@ -21,7 +19,7 @@
 }
 
 .members-of-team {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
 
@@ -30,7 +28,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     .team-card:not(:last-child) {
       margin-right: 30px;
     }
