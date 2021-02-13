@@ -1,5 +1,5 @@
 .connection {
-  color: $main-text-color;
+  color: var(--main-text-color);
   font-weight: 500;
   letter-spacing: 0.02em;
   font-size: 24px;
@@ -17,11 +17,11 @@
     line-height: 1.14;
   }
 
-  transition: color $animation-time $timing-function;
+  transition: color var(--animation-time) var(--timing-function);
 
   &:hover,
   &:focus {
-    color: $accent-color;
+    color: var(--accent-color);
   }
 
   &-tel {
@@ -29,7 +29,7 @@
       font-size: 34px;
       line-height: 1.18;
 
-      color: $accent-color;
+      color: var(--accent-color);
     }
   }
 }

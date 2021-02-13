@@ -4,9 +4,9 @@
 }
 
 body {
-  color: $main-text-color;
-  background-color: $main-white-color;
-  font-family: $main-font-family;
+  color: var(--main-text-color);
+  background-color: var(--main-white-color);
+  font-family: var(--main-font-family);
   font-size: 14px;
   font-weight: 400;
   font-style: normal;

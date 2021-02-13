@@ -1,10 +1,10 @@
 .nav-pages {
   .link {
-    transition: color $animation-time $timing-function;
+    transition: color var(--animation-time) var(--timing-function);
 
     display: block;
 
-    color: $title-text-color;
+    color: var(--title-text-color);
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
@@ -20,7 +20,7 @@
     &:hover,
     &:focus,
     &.current {
-      color: $accent-color;
+      color: var (--accent-color);
     }
   }
 }

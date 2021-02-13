@@ -15,12 +15,12 @@
 
   .social-link {
     // @extend %social-link;
-    color: $icon-color;
-    background-color: $main-white-color;
+    color: var(--icon-color);
+    background-color: var(--main-white-color);
     &:hover,
     &:focus {
-      background-color: $accent-color;
-      color: $main-white-color;
+      background-color: var(--accent-color);
+      color: var(--main-white-color);
     }
   }
 }
@@ -40,12 +40,7 @@
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-member {
-  color: $title-text-color;
-  font-weight: 500;
-}
-
 .team-specialization {
-  color: $main-text-color;
+  color: var(--main-text-color);
   font-weight: 400;
 }

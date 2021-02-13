@@ -1,9 +1,30 @@
-.title {
+h1 {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  color: var(--main-white-color);
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop) {
+    width: 600px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+h2,
+h3,
+h4,
+h5 {
   font-weight: 700;
+  color: var(--title-text-color);
+}
+
+// .title {
+h2 {
   font-size: 28px;
   line-height: 1.18;
   text-align: center;
-  color: $title-text-color;
 
   margin-bottom: 30px;
 
@@ -15,33 +36,37 @@
   }
 }
 
-.advantages-title {
-  color: $title-text-color;
-  font-weight: 700;
+// .project-title {
+h3 {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  .form-title {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    @media screen and (min-width: $desktop) {
+      line-height: 1.15;
+    }
+  }
+}
+
+// .team-member {
+h4 {
+  .team-member {
+    font-weight: 500;
+  }
+}
+
+// .advantages-title
+h5 {
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.form-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-  color: $title-text-color;
-
-  @media screen and (min-width: $desktop) {
-    line-height: 1.15;
-  }
-}
-
-.project-title {
-  color: $title-text-color;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
 .title-inverse {
-  color: $background-button-color;
+  color: var(--background-button-color);
 }

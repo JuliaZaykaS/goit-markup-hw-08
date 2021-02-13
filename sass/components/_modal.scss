@@ -8,7 +8,7 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity $animation-time $timing-function;
+  transition: opacity var(--animation-time) var(--timing-function);
 }
 
 .modal-window {
@@ -16,7 +16,7 @@
   top: 50%;
   left: 50%;
   transform: scale(1) translate(-50%, -50%);
-  transition: transform $animation-time $timing-function;
+  transition: transform var(--animation-time) var(--timing-function);
   width: 450px;
   // height: 609px;
 
@@ -25,7 +25,7 @@
     // height: 581px;
   }
 
-  background-color: $main-white-color;
+  background-color: var(--main-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;

@@ -4,26 +4,26 @@
   padding-left: 22px;
   padding-right: 22px;
 
-  color: $title-text-color;
-  background-color: $background-button-color;
+  color: var(--title-text-color);
+  background-color: var(--background-button-color);
   border: none;
   border-radius: 4px;
 
-  font-family: $main-font-family;
+  font-family: var(--main-font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
 
-  transition: color $animation-time $timing-function,
-    background-color $animation-time $timing-function,
-    box-shadow $animation-time $timing-function;
+  transition: color var(--animation-time) var(--timing-function),
+    background-color var(--animation-time) var(--timing-function),
+    box-shadow var(--animation-time) var(--timing-function);
 
   &:hover,
   &:focus {
     outline: none;
-    color: $main-white-color;
-    background-color: $accent-color;
+    color: var (--main-white-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }

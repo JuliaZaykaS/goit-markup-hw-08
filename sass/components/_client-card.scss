@@ -6,12 +6,12 @@
     justify-content: center;
     width: 210px;
     height: 90px;
-    color: $icon-color;
+    color: var(--icon-color);
 
     border: 1px solid currentColor;
     border-radius: 4px;
 
-    transition: color $animation-time $timing-function;
+    transition: color var(--animation-time) var(--timing-function);
 
     @media screen and (min-width: $tablet) {
       width: 226px;
@@ -23,7 +23,7 @@
 
     &:hover,
     &:focus {
-      color: $accent-color;
+      color: var(--accent-color);
     }
   }
 }
