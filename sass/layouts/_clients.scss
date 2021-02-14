@@ -4,7 +4,7 @@
   justify-content: center;
 
   .client {
-    @media screen and (max-width: $tablet - 1) {
+    @media screen and (max-width: $desktop - 1) {
       margin-bottom: 30px;
     }
   }

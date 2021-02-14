@@ -1,13 +1,13 @@
 .advantage-item {
-  width: 450px;
+  // width: 450px;
 
-  @media screen and (min-width: $tablet) {
-    width: 354px;
-  }
+  // @media screen and (min-width: $tablet) {
+  //   width: 354px;
+  // }
 
-  @media screen and (min-width: $desktop) {
-    width: 270px;
-  }
+  // @media screen and (min-width: $desktop) {
+  //   width: 270px;
+  // }
 
   .advantages-title {
     margin-bottom: 10px;
@@ -29,6 +29,6 @@
   border-radius: 4px;
 }
 
-.advantages-text {
-  line-height: 1.71;
-}
+// .advantages-text {
+//   line-height: 1.71;
+// }

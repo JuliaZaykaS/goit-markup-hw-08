@@ -2,9 +2,9 @@
   background-color: var(--background-button-color);
 
   &-card {
-    background-color: var(--main-white-color);
+    // background-color: var(--main-white-color);
 
-    @media screen and (max-width: $tablet - 1) {
+    @media screen and (max-width: $desktop - 1) {
       margin-bottom: 30px;
     }
   }

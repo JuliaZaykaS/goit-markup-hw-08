@@ -14,6 +14,7 @@ body {
 }
 
 .container {
+  background-color: blue;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -46,4 +47,10 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

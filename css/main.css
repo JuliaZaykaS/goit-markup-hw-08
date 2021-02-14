@@ -45,6 +45,7 @@ body {
 }
 
 .container {
+  background-color: blue;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -87,6 +88,12 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -157,7 +164,7 @@ h5 {
 }
 
 .title-inverse {
-  color: var(--background-button-color);
+  color: var(--main-white-color);
 }
 
 .icon {
@@ -674,6 +681,9 @@ h5 {
 
 .form {
   padding: 40px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .form .form-button {
@@ -946,6 +956,67 @@ h5 {
   cursor: pointer;
 }
 
+.card {
+  background-color: var(--main-white-color);
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    -ms-flex-preferred-size: calc((100% - 1 * 30px) / 2);
+        flex-basis: calc((100% - 1 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 4);
+        flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+}
+
+.card-content {
+  font-size: 16px;
+  color: var(--main-text-color);
+  width: 100%;
+}
+
+.card-content .advantages-content {
+  line-height: 1.71;
+}
+
+.card-content .member-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.card-content .project-content {
+  height: 110px;
+  padding: 20px 24px;
+  line-height: 1.87;
+  border: 1px solid var(--card-border-color);
+  border-top: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 767px) {
+  .card-content .project-content {
+    height: 146px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-card,
+  .service-card {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 3);
+        flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .advantages-catalog {
     display: -webkit-box;
@@ -970,22 +1041,6 @@ h5 {
 @media screen and (min-width: 1200px) {
   .advantages-catalog .advantage-item:not(:last-child) {
     margin: 15px;
-  }
-}
-
-.advantage-item {
-  width: 450px;
-}
-
-@media screen and (min-width: 768px) {
-  .advantage-item {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantage-item {
-    width: 270px;
   }
 }
 
@@ -1015,10 +1070,6 @@ h5 {
   border-radius: 4px;
 }
 
-.advantages-text {
-  line-height: 1.71;
-}
-
 .services {
   display: none;
 }
@@ -1033,30 +1084,22 @@ h5 {
     display: -ms-flexbox;
     display: flex;
   }
-  .services .our-service {
+  .services .service-card {
     position: relative;
   }
-  .services .our-service:not(:last-child) {
+  .services .service-card:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.service-foto {
-  display: block;
-}
-
-.service-description {
+.service-title {
   position: absolute;
   width: 100%;
   left: 0;
   bottom: 0;
   padding-top: 27px;
   padding-bottom: 27px;
-  font-weight: 700;
-  line-height: 1.14;
   text-align: center;
-  text-transform: uppercase;
-  color: var(--main-white-color);
   background-color: rgba(47, 48, 58, 0.8);
 }
 
@@ -1064,11 +1107,7 @@ h5 {
   background-color: var(--background-button-color);
 }
 
-.team-card {
-  background-color: var(--main-white-color);
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .team-card {
     margin-bottom: 30px;
   }
@@ -1101,52 +1140,14 @@ h5 {
   }
 }
 
-.team-card {
-  width: 450px;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .team-card {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-card {
-    width: 270px;
-  }
-}
-
-.team-card .social-link {
+.social-link {
   color: var(--icon-color);
   background-color: var(--main-white-color);
 }
 
-.team-card .social-link:hover, .team-card .social-link:focus {
+.social-link:hover, .social-link:focus {
   background-color: var(--accent-color);
   color: var(--main-white-color);
-}
-
-.team-foto {
-  display: block;
-  width: 100%;
-}
-
-.member-content {
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team-specialization {
-  color: var(--main-text-color);
-  font-weight: 400;
 }
 
 .social-network-list {
@@ -1173,7 +1174,7 @@ h5 {
           justify-content: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .regular-clients .client {
     margin-bottom: 30px;
   }
@@ -1386,24 +1387,11 @@ h5 {
 }
 
 .project-card {
-  width: 450px;
   position: relative;
   -webkit-transition: -webkit-box-shadow var(--animation-time) var(--timing-function);
   transition: -webkit-box-shadow var(--animation-time) var(--timing-function);
   transition: box-shadow var(--animation-time) var(--timing-function);
   transition: box-shadow var(--animation-time) var(--timing-function), -webkit-box-shadow var(--animation-time) var(--timing-function);
-}
-
-@media screen and (min-width: 768px) {
-  .project-card {
-    width: 354px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .project-card {
-    width: 370px;
-  }
 }
 
 .project-card:hover, .project-card:focus {
@@ -1414,12 +1402,6 @@ h5 {
 .project-foto {
   position: relative;
   overflow: hidden;
-}
-
-.project-foto img {
-  display: block;
-  width: 100%;
-  height: 294px;
 }
 
 .project-description {
@@ -1466,28 +1448,7 @@ h5 {
           transform: translateY(-100%);
 }
 
-.card-content {
-  width: 100%;
-  height: 110px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  color: var(--main-text-color);
-  border: 1px solid var(--card-border-color);
-  border-top: none;
-}
-
-@media screen and (min-width: 768px) and (max-width: 767px) {
-  .card-content {
-    height: 146px;
-  }
-}
-
-.card-content .project-title {
+.project-title {
   margin-bottom: 4px;
 }
 
@@ -1549,13 +1510,13 @@ h5 {
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 767px) {
   .projects .project-card:nth-child(2n) {
     margin-right: 0;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 767px) and (min-width: 1200px) {
   .projects .project-card:nth-child(3n) {
     margin-right: 0;
   }
