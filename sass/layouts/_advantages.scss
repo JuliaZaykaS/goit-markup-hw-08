@@ -3,20 +3,36 @@
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
-      margin: -15px;
+
+      .advantage-item:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      .advantage-item:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 }
 
 .advantage-item {
-  margin-bottom: 30px;
-
-  @media screen and (min-width: $tablet) {
-    margin: 15px;
-  }
-  .advantages-catalog &:not(:last-child) {
-    @media screen and (min-width: $desktop) {
-      margin: 15px;
-    }
+  @media screen and (max-width: $desktop - 1) {
+    margin-bottom: 30px;
   }
 }
+
+// .advantage-item {
+//   margin-bottom: 30px;
+
+//   @media screen and (min-width: $tablet) {
+//     margin-right: 30px;
+//   }
+
+//   .advantages-catalog &:not(:last-child) {
+//     @media screen and (min-width: $desktop) {
+//       margin-right: 0;
+//     }
+//   }
+// }

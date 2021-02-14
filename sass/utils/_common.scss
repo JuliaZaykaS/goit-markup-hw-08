@@ -14,20 +14,23 @@ body {
 }
 
 .container {
-  background-color: blue;
+  // background-color: blue;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 
   @media screen and (min-width: $mobile) {
-    width: $mobile;
+    max-width: $mobile;
+    width: 100%;
   }
   @media screen and (min-width: $tablet) {
-    width: $tablet;
+    max-width: $tablet;
+    width: 100%;
   }
   @media screen and (min-width: $desktop) {
-    width: $desktop;
+    max-width: $desktop;
+    width: 100%;
   }
 }
 
@@ -53,4 +56,5 @@ img {
   display: block;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }

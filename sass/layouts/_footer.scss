@@ -1,5 +1,6 @@
 .footer {
   background-color: var(--background-color-footer);
+  color: var(--main-white-color);
 
   & .container {
     padding-top: 60px;
@@ -37,16 +38,10 @@
   .logo-inverse {
     margin-bottom: 20px;
   }
-
-  .social-link {
-    .social-icon {
-      fill: var(--main-white-color);
-    }
-  }
 }
 
 .address {
-  color: var(--main-white-color);
+  // color: var(--main-white-color);
   font-style: normal;
   line-height: 1.71;
 }

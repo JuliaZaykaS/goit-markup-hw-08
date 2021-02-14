@@ -34,26 +34,30 @@
   }
 
   .project-card {
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
 
     // @media screen and (max-width: $tablet - 1) {
     // }
 
     @media screen and (min-width: $tablet) {
+      // &:not(:last-child) {
       margin-right: 30px;
+      // }
     }
-    @media screen and (min-width: $tablet) and (max-width: $tablet - 1) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
       &:nth-child(2n) {
         margin-right: 0;
       }
-      //   .team-card:nth-child(2n + 1) {
-      // margin-right: 30px;
-      // }
+    }
+    //   .team-card:nth-child(2n + 1) {
+    // margin-right: 30px;
+    // }
 
-      @media screen and (min-width: $desktop) {
-        &:nth-child(3n) {
-          margin-right: 0;
-        }
+    @media screen and (min-width: $desktop) {
+      &:nth-child(3n) {
+        margin-right: 0;
       }
     }
   }

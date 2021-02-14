@@ -45,7 +45,6 @@ body {
 }
 
 .container {
-  background-color: blue;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -54,19 +53,22 @@ body {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
   }
 }
 
@@ -94,6 +96,7 @@ img {
   display: block;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 h1 {
@@ -525,6 +528,12 @@ h5 {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .slogan-title {
+    width: 600px;
+  }
+}
+
 .button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -585,10 +594,18 @@ h5 {
   height: 44px;
   border-radius: 50%;
   padding: 12px;
+  color: var(--icon-color);
+  background-color: var(--main-white-color);
+}
+
+.button-round:hover, .button-round:focus {
+  background-color: var(--accent-color);
+  color: var(--main-white-color);
 }
 
 .button-round-inverse {
   background-color: var(--icon-footer-background);
+  color: var(--main-white-color);
 }
 
 .btn {
@@ -1024,23 +1041,21 @@ h5 {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
   }
-}
-
-.advantage-item {
-  margin-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) {
-  .advantage-item {
-    margin: 15px;
+  .advantages-catalog .advantage-item:nth-child(2n + 1) {
+    margin-right: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .advantages-catalog .advantage-item:not(:last-child) {
-    margin: 15px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .advantage-item {
+    margin-bottom: 30px;
   }
 }
 
@@ -1090,17 +1105,16 @@ h5 {
   .services .service-card:not(:last-child) {
     margin-right: 30px;
   }
-}
-
-.service-title {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  text-align: center;
-  background-color: rgba(47, 48, 58, 0.8);
+  .services .service-title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
 }
 
 .team {
@@ -1138,16 +1152,6 @@ h5 {
   .members-of-team .team-card:not(:last-child) {
     margin-right: 30px;
   }
-}
-
-.social-link {
-  color: var(--icon-color);
-  background-color: var(--main-white-color);
-}
-
-.social-link:hover, .social-link:focus {
-  background-color: var(--accent-color);
-  color: var(--main-white-color);
 }
 
 .social-network-list {
@@ -1236,6 +1240,7 @@ h5 {
 
 .footer {
   background-color: var(--background-color-footer);
+  color: var(--main-white-color);
 }
 
 .footer .container {
@@ -1302,12 +1307,7 @@ h5 {
   margin-bottom: 20px;
 }
 
-.footer-links .social-link .social-icon {
-  fill: var(--main-white-color);
-}
-
 .address {
-  color: var(--main-white-color);
   font-style: normal;
   line-height: 1.71;
 }
@@ -1356,34 +1356,6 @@ h5 {
   .footer-contacts {
     margin-right: 165px;
   }
-}
-
-.filter-button {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 22px;
-  padding-right: 22px;
-  color: var(--title-text-color);
-  background-color: var(--background-button-color);
-  border: none;
-  border-radius: 4px;
-  font-family: var(--main-font-family);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  -webkit-transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), -webkit-box-shadow var(--animation-time) var(--timing-function);
-  transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), -webkit-box-shadow var(--animation-time) var(--timing-function);
-  transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), box-shadow var(--animation-time) var(--timing-function);
-  transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), box-shadow var(--animation-time) var(--timing-function), -webkit-box-shadow var(--animation-time) var(--timing-function);
-}
-
-.filter-button:hover, .filter-button:focus {
-  outline: none;
-  color: var --main-white-color;
-  background-color: var(--accent-color);
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-card {
@@ -1500,7 +1472,7 @@ h5 {
   }
 }
 
-.projects .project-card {
+.projects .project-card:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -1510,13 +1482,13 @@ h5 {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .projects .project-card:nth-child(2n) {
     margin-right: 0;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 767px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .projects .project-card:nth-child(3n) {
     margin-right: 0;
   }
