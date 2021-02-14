@@ -6,15 +6,3 @@
     margin-right: 10px;
   }
 }
-
-.social-link {
-  display: block;
-  width: 44px;
-  height: 44px;
-
-  transition: color var(--animation-time) var(--timing-function),
-    background-color var(--animation-time) var(--timing-function);
-
-  border-radius: 50%;
-  padding: 12px;
-}

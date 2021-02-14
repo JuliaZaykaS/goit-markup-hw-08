@@ -80,7 +80,7 @@
     flex-direction: column-reverse;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: $tablet - 1) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -131,22 +131,14 @@
   }
 }
 
-.menu-button {
+.btn.menu-btn {
   z-index: 999;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  border: none;
-  background-color: transparent;
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-    outline: none;
-  }
+  // display: block;
+
   @media screen and (min-width: $tablet) {
     display: none;
   }
+
   &.is-open .btn-close-menu {
     display: block;
   }

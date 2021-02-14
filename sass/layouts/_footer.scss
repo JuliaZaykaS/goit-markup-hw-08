@@ -39,12 +39,6 @@
   }
 
   .social-link {
-    background-color: var(--icon-footer-background);
-    transition: background-color var(--animation-time) var(--timing-function);
-    &:hover,
-    &:focus {
-      background-color: var(--accent-color);
-    }
     .social-icon {
       fill: var(--main-white-color);
     }

@@ -129,22 +129,22 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-h3 .form-title {
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 1200px) {
-  h3 .form-title {
+  h3 {
     line-height: 1.15;
   }
+}
+
+h3.project-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
 }
 
 h4 .team-member {
@@ -209,7 +209,7 @@ h5 {
 }
 
 .nav-pages .link:hover, .nav-pages .link:focus, .nav-pages .link.current {
-  color: var --accent-color;
+  color: var(--accent-color);
 }
 
 .connection {
@@ -367,7 +367,7 @@ h5 {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-connection {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -435,36 +435,21 @@ h5 {
   }
 }
 
-.menu-button {
+.btn.menu-btn {
   z-index: 999;
-  width: 40px;
-  height: 40px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: none;
-  background-color: transparent;
-}
-
-.menu-button:hover, .menu-button:focus {
-  fill: var(--accent-color);
-  outline: none;
 }
 
 @media screen and (min-width: 768px) {
-  .menu-button {
+  .btn.menu-btn {
     display: none;
   }
 }
 
-.menu-button.is-open .btn-close-menu {
+.btn.menu-btn.is-open .btn-close-menu {
   display: block;
 }
 
-.menu-button.is-open .btn-mobile-menu {
+.btn.menu-btn.is-open .btn-mobile-menu {
   display: none;
 }
 
@@ -533,46 +518,102 @@ h5 {
   margin-bottom: 30px;
 }
 
-.button-primary {
-  display: inline-block;
-  border: 4px solid transparent;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  min-width: 200px;
-  padding: 10px 32px;
-  color: var(--main-white-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-}
-
-.modal-button {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 8px;
-  right: 8px;
+  padding: 6px 22px;
+  color: var(--title-text-color);
+  background-color: var(--background-button-color);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  -webkit-transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), -webkit-box-shadow var(--animation-time) var(--timing-function);
+  transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), -webkit-box-shadow var(--animation-time) var(--timing-function);
+  transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), box-shadow var(--animation-time) var(--timing-function);
+  transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function), box-shadow var(--animation-time) var(--timing-function), -webkit-box-shadow var(--animation-time) var(--timing-function);
+}
+
+.button:hover, .button:focus {
+  outline: none;
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button-primary {
+  border: 4px solid transparent;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  padding: 10px 32px;
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
+.button-subscribe {
+  height: 50px;
+  letter-spacing: 0.06em;
+}
+
+.button-round {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.button-round-inverse {
+  background-color: var(--icon-footer-background);
+}
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30px;
   height: 30px;
+  border: none;
   border-radius: 50%;
-  background: var(--main-white-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--main-white-color);
   -webkit-transition: fill var(--animation-time) var(--timing-function);
   transition: fill var(--animation-time) var(--timing-function);
 }
 
-.modal-button:hover, .modal-button:focus {
+.btn:hover, .btn:focus {
+  outline: none;
   fill: var(--accent-color);
   cursor: pointer;
+}
+
+.btn .modal-btn {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn.menu-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
 }
 
 .modal-backdrop {
@@ -622,6 +663,15 @@ h5 {
           transform: translate(-50%, -50%) scale(0.9);
 }
 
+.modal-btn {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 8px;
+  right: 8px;
+}
+
 .form {
   padding: 40px;
 }
@@ -629,8 +679,6 @@ h5 {
 .form .form-button {
   margin-left: 85px;
   margin-right: 85px;
-  letter-spacing: 0.06em;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 1200px) {
@@ -852,17 +900,6 @@ h5 {
     display: -ms-flexbox;
     display: flex;
   }
-}
-
-.subscribe-form .subscribe-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 50px;
-  letter-spacing: 0.06em;
 }
 
 @media screen and (max-width: 767px) {
@@ -1125,16 +1162,6 @@ h5 {
   margin-right: 10px;
 }
 
-.social-link {
-  display: block;
-  width: 44px;
-  height: 44px;
-  -webkit-transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function);
-  transition: color var(--animation-time) var(--timing-function), background-color var(--animation-time) var(--timing-function);
-  border-radius: 50%;
-  padding: 12px;
-}
-
 .regular-clients {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1272,16 +1299,6 @@ h5 {
 
 .footer-links .logo-inverse {
   margin-bottom: 20px;
-}
-
-.footer-links .social-link {
-  background-color: var(--icon-footer-background);
-  -webkit-transition: background-color var(--animation-time) var(--timing-function);
-  transition: background-color var(--animation-time) var(--timing-function);
-}
-
-.footer-links .social-link:hover, .footer-links .social-link:focus {
-  background-color: var(--accent-color);
 }
 
 .footer-links .social-link .social-icon {

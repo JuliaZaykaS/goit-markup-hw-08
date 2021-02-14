@@ -1,36 +1,66 @@
-.button-primary {
-  display: inline-block;
-  border: 4px solid transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  min-width: 200px;
-  padding: 10px 32px;
-
-  color: var(--main-white-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-}
-
-.modal-button {
-  position: absolute;
-  display: flex;
+.button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--main-white-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px 22px;
 
-  transition: fill var(--animation-time) var(--timing-function);
+  color: var(--title-text-color);
+  background-color: var(--background-button-color);
+  border: none;
+  border-radius: 4px;
+
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+
+  transition: color var(--animation-time) var(--timing-function),
+    background-color var(--animation-time) var(--timing-function),
+    box-shadow var(--animation-time) var(--timing-function);
 
   &:hover,
   &:focus {
-    fill: var(--accent-color);
-    cursor: pointer;
+    outline: none;
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &-primary {
+    border: 4px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    padding: 10px 32px;
+
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+  }
+
+  &-subscribe {
+    height: 50px;
+    letter-spacing: 0.06em;
+  }
+
+  &-round {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+
+    // transition: color var(--animation-time) var(--timing-function),
+    //   background-color var(--animation-time) var(--timing-function);
+  }
+
+  &-round-inverse {
+    background-color: var(--icon-footer-background);
+    // transition: background-color var(--animation-time) var(--timing-function);
   }
 }

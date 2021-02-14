@@ -40,3 +40,31 @@
 .modal-backdrop.is-hidden .modal-window {
   transform: translate(-50%, -50%) scale(0.9);
 }
+
+.modal-btn {
+  position: absolute;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+}
+// .modal-button {
+//   position: absolute;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   top: 8px;
+//   right: 8px;
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+//   background: var(--main-white-color);
+//   border: 1px solid rgba(0, 0, 0, 0.1);
+
+//   transition: fill var(--animation-time) var(--timing-function);
+
+//   &:hover,
+//   &:focus {
+//     fill: var(--accent-color);
+//     cursor: pointer;
+//   }
+// }
