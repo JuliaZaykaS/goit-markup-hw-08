@@ -1,0 +1,97 @@
+.form-input {
+  letter-spacing: 0.01em;
+  color: var(--main-text-color);
+  //   background-color: transparent;
+  cursor: pointer;
+
+  .form-label {
+    .form-subtitle {
+      font-size: 12px;
+      line-height: 1.67;
+    }
+
+    .form-field {
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.14;
+      background-color: transparent;
+      color: var(--title-text-color);
+      border: 1px solid rgba(33, 33, 33, 0.2);
+
+      border-radius: 4px;
+      outline: none;
+      padding: 11px 12px;
+      transition: border var(--animation-time) var(--timing-function);
+      @media screen and (min-width: $desktop) {
+        font-size: 12px;
+        line-height: 1.16;
+      }
+
+      &.comment-field {
+        resize: none;
+        min-height: 120px;
+        padding: 12px 16px;
+
+        transition: border var(--animation-time) var(--timing-function);
+
+        &::placeholder {
+          color: rgba(117, 117, 117, 0.5);
+        }
+      }
+      &.email-form {
+        // width: 100%;
+        height: 50px;
+        padding: 15px 16px;
+
+        font-size: 16px;
+        line-height: 1.25;
+
+        color: var(--footer-color);
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+      &.form-accent:hover,
+      &.form-accent:focus {
+        outline: none;
+        border: 1px solid var(--accent-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.form-input-with-icon {
+  .form-label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .form-field {
+      padding-left: 42px;
+    }
+    .form-icon {
+      position: absolute;
+      top: 55%;
+      left: 12px;
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+
+      transition: fill var(--animation-time) var(--timing-function);
+    }
+  }
+
+  .form-accent:focus + .icon {
+    color: var(--accent-color);
+  }
+}
+
+// .form-field-placeholder {
+//   font-size: 16px;
+//   line-height: 1.25;
+//   letter-spacing: 0.03em;
+//   color: rgba(255, 255, 255, 0.6);
+// }

@@ -1,0 +1,60 @@
+.form-agreement {
+  margin-bottom: 31px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1.67;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+    height: 15px;
+  }
+
+  &-link {
+    color: var(--accent-color);
+  }
+}
+
+.agree-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
+
+  margin-right: 7px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  transition: border-color var(--animation-time) var(--timing-function),
+    background-color var(--animation-time) var(--timing-function);
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
+
+  .agree-checkbox:focus + & {
+    border-color: var(--accent-color);
+  }
+  .agree-checkbox:checked + & {
+    background-image: url(../images/main/icon-check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-origin: border-box;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
