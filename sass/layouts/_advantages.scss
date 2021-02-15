@@ -21,18 +21,22 @@
   @media screen and (max-width: $desktop - 1) {
     margin-bottom: 30px;
   }
+  .advantages-title {
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $tablet - 1) {
+      text-align: center;
+    }
+  }
 }
 
-// .advantage-item {
-//   margin-bottom: 30px;
+.advantage-icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 
-//   @media screen and (min-width: $tablet) {
-//     margin-right: 30px;
-//   }
-
-//   .advantages-catalog &:not(:last-child) {
-//     @media screen and (min-width: $desktop) {
-//       margin-right: 0;
-//     }
-//   }
-// }
+  height: 120px;
+  background-color: var(--background-button-color);
+  border-radius: 4px;
+}

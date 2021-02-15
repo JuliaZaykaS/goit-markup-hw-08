@@ -62,14 +62,10 @@
       background-color: var(--accent-color);
       color: var(--main-white-color);
     }
-
-    // transition: color var(--animation-time) var(--timing-function),
-    //   background-color var(--animation-time) var(--timing-function);
   }
 
   &-round-inverse {
     background-color: var(--icon-footer-background);
     color: var(--main-white-color);
-    // transition: background-color var(--animation-time) var(--timing-function);
   }
 }

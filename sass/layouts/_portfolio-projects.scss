@@ -38,13 +38,8 @@
       margin-bottom: 30px;
     }
 
-    // @media screen and (max-width: $tablet - 1) {
-    // }
-
     @media screen and (min-width: $tablet) {
-      // &:not(:last-child) {
       margin-right: 30px;
-      // }
     }
     @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
       .project-content {
@@ -54,9 +49,6 @@
         margin-right: 0;
       }
     }
-    //   .team-card:nth-child(2n + 1) {
-    // margin-right: 30px;
-    // }
 
     @media screen and (min-width: $desktop) {
       &:nth-child(3n) {

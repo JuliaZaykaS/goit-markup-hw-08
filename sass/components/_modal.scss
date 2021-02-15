@@ -18,11 +18,9 @@
   transform: scale(1) translate(-50%, -50%);
   transition: transform var(--animation-time) var(--timing-function);
   width: 450px;
-  // height: 609px;
 
   @media screen and (min-width: $desktop) {
     width: 528px;
-    // height: 581px;
   }
 
   background-color: var(--main-white-color);
@@ -47,24 +45,3 @@
   top: 8px;
   right: 8px;
 }
-// .modal-button {
-//   position: absolute;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   top: 8px;
-//   right: 8px;
-//   width: 30px;
-//   height: 30px;
-//   border-radius: 50%;
-//   background: var(--main-white-color);
-//   border: 1px solid rgba(0, 0, 0, 0.1);
-
-//   transition: fill var(--animation-time) var(--timing-function);
-
-//   &:hover,
-//   &:focus {
-//     fill: var(--accent-color);
-//     cursor: pointer;
-//   }
-// }

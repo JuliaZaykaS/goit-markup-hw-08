@@ -1,7 +1,6 @@
 .form-input {
   letter-spacing: 0.01em;
   color: var(--main-text-color);
-  //   background-color: transparent;
   cursor: pointer;
 
   .form-label {
@@ -32,14 +31,15 @@
         min-height: 120px;
         padding: 12px 16px;
 
-        transition: border var(--animation-time) var(--timing-function);
-
         &::placeholder {
           color: rgba(117, 117, 117, 0.5);
         }
       }
       &.email-form {
-        width: 358px;
+        width: 100%;
+        @media screen and (min-width: $desktop) {
+          width: 358px;
+        }
         height: 50px;
         padding: 15px 16px;
 
@@ -53,6 +53,7 @@
           color: rgba(255, 255, 255, 0.6);
         }
       }
+
       &.form-accent:hover,
       &.form-accent:focus {
         outline: none;
@@ -64,14 +65,8 @@
 }
 
 .form-input-with-icon {
+  position: relative;
   .form-label {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-    .form-field {
-      padding-left: 42px;
-    }
     .form-icon {
       position: absolute;
       top: 55%;
@@ -82,16 +77,13 @@
 
       transition: fill var(--animation-time) var(--timing-function);
     }
+
+    .form-field {
+      padding-left: 42px;
+    }
   }
 
   .form-accent:focus + .icon {
     color: var(--accent-color);
   }
 }
-
-// .form-field-placeholder {
-//   font-size: 16px;
-//   line-height: 1.25;
-//   letter-spacing: 0.03em;
-//   color: rgba(255, 255, 255, 0.6);
-// }
