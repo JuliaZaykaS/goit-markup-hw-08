@@ -99,12 +99,17 @@
 // }
 
 .subscribe-form {
+  @media screen and (max-width: $desktop - 1) {
+    width: 450px;
+  }
+
   @media screen and (min-width: $desktop) {
+    width: 570px;
     display: flex;
   }
 
   .subscribe-button {
-    @media screen and (max-width: $tablet - 1) {
+    @media screen and (max-width: $desktop - 1) {
       margin-left: auto;
       margin-right: auto;
     }
@@ -114,7 +119,7 @@
     margin-left: 10px;
   }
 
-  .form-label .email.form {
+  .form-label .email-form {
     // width: 450px;
     // height: 50px;
     // padding-top: 15px;
@@ -122,12 +127,12 @@
     // padding-left: 16px;
 
     @media screen and (max-width: $desktop - 1) {
-      width: 450px;
+      // width: 450px;
       margin-bottom: 20px;
     }
 
     @media screen and (min-width: $desktop) {
-      width: 358px;
+      // max-width: 358px;
       margin-right: 12px;
     }
 

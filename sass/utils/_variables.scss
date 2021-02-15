@@ -32,6 +32,12 @@
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-time: 250ms;
+
+  --gradient: linear-gradient(
+    to right,
+    var(--background-gradient),
+    var(--background-gradient)
+  );
 }
 
 $mobile: 480px;

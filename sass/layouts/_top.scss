@@ -3,12 +3,35 @@
   // margin-left: auto;
   // margin-right: auto;
   background-color: var(--background-color-footer);
-  background-image: linear-gradient(
-      to right,
-      var(--background-gradient),
-      var(--background-gradient)
-    ),
-    url("../images/main/banner.jpg");
+
+  @media screen and (max-width: $mobile) {
+    background-image: var(--gradient), url("../images/main/banner-mobile.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: var(--gradient),
+        url("../images/main/banner-mobile@2x.jpg");
+    }
+  }
+  @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+    background-image: var(--gradient), url("../images/main/banner-tablet.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: var(--gradient),
+        url("../images/main/banner-tablet@2x.jpg");
+    }
+  }
+  @media screen and (min-width: $tablet + 1) {
+    background-image: var(--gradient), url("../images/main/banner-desktop.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: var(--gradient),
+        url("../images/main/banner-desktop@2x.jpg");
+    }
+  }
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

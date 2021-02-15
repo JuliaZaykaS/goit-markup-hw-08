@@ -27,6 +27,11 @@
   --second-font-family: Raleway, sans-serif;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-time: 250ms;
+  --gradient: linear-gradient(
+    to right,
+    var(--background-gradient),
+    var(--background-gradient)
+  );
 }
 
 * {
@@ -157,11 +162,16 @@ h3.project-title {
   text-align: left;
 }
 
+h4 {
+  font-size: 16px;
+}
+
 h4 .team-member {
   font-weight: 500;
 }
 
 h5 {
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -494,13 +504,47 @@ h5 {
 .slogan {
   height: 400px;
   background-color: var(--background-color-footer);
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--background-gradient)), to(var(--background-gradient))), url("../images/main/banner.jpg");
-  background-image: linear-gradient(to right, var(--background-gradient), var(--background-gradient)), url("../images/main/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
   letter-spacing: 0.06em;
+}
+
+@media screen and (max-width: 480px) {
+  .slogan {
+    background-image: var(--gradient), url("../images/main/banner-mobile.jpg");
+  }
+}
+
+@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
+  .slogan {
+    background-image: var(--gradient), url("../images/main/banner-mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .slogan {
+    background-image: var(--gradient), url("../images/main/banner-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (max-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (max-width: 768px) and (min-resolution: 2dppx) {
+  .slogan {
+    background-image: var(--gradient), url("../images/main/banner-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .slogan {
+    background-image: var(--gradient), url("../images/main/banner-desktop.jpg");
+  }
+}
+
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .slogan {
+    background-image: var(--gradient), url("../images/main/banner-desktop@2x.jpg");
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -586,6 +630,7 @@ h5 {
 .button-subscribe {
   height: 50px;
   letter-spacing: 0.06em;
+  padding: 13px 22px;
 }
 
 .button-round {
@@ -753,6 +798,7 @@ h5 {
 }
 
 .form-input .form-label .form-field.email-form {
+  width: 358px;
   height: 50px;
   padding: 15px 16px;
   font-size: 16px;
@@ -1329,15 +1375,22 @@ h5 {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .subscribe-form {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .subscribe-form {
+    width: 570px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .subscribe-form .subscribe-button {
     margin-left: auto;
     margin-right: auto;
@@ -1349,15 +1402,13 @@ h5 {
 }
 
 @media screen and (max-width: 1199px) {
-  .subscribe-form .form-label .email.form {
-    width: 450px;
+  .subscribe-form .form-label .email-form {
     margin-bottom: 20px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .subscribe-form .form-label .email.form {
-    width: 358px;
+  .subscribe-form .form-label .email-form {
     margin-right: 12px;
   }
 }
@@ -1487,6 +1538,9 @@ h5 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects .project-card .project-content {
+    height: 146px;
+  }
   .projects .project-card:nth-child(2n) {
     margin-right: 0;
   }
