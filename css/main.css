@@ -762,7 +762,6 @@ h5 {
 .form-input {
   letter-spacing: 0.01em;
   color: var(--main-text-color);
-  cursor: pointer;
 }
 
 .form-input .form-label .form-subtitle {
@@ -862,8 +861,8 @@ h5 {
   width: 18px;
   height: 18px;
   margin-right: 12px;
-  -webkit-transition: fill var(--animation-time) var(--timing-function);
-  transition: fill var(--animation-time) var(--timing-function);
+  -webkit-transition: color var(--animation-time) var(--timing-function);
+  transition: color var(--animation-time) var(--timing-function);
 }
 
 .form-input-with-icon .form-label .form-field {
@@ -952,6 +951,7 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   font-size: 12px;
   line-height: 1.67;
 }

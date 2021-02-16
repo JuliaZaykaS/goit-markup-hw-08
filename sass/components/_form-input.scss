@@ -1,7 +1,6 @@
 .form-input {
   letter-spacing: 0.01em;
   color: var(--main-text-color);
-  cursor: pointer;
 
   .form-label {
     .form-subtitle {
@@ -62,29 +61,29 @@
       }
     }
   }
-}
 
-.form-input-with-icon {
-  position: relative;
-  .form-label {
-    .form-icon {
-      position: absolute;
-      top: 55%;
-      left: 12px;
-      width: 18px;
-      height: 18px;
-      margin-right: 12px;
+  &-with-icon {
+    position: relative;
+    .form-label {
+      .form-icon {
+        position: absolute;
+        top: 55%;
+        left: 12px;
+        width: 18px;
+        height: 18px;
+        margin-right: 12px;
 
-      transition: fill var(--animation-time) var(--timing-function);
+        transition: color var(--animation-time) var(--timing-function);
+      }
+
+      .form-field {
+        padding-left: 42px;
+      }
     }
 
-    .form-field {
-      padding-left: 42px;
+    .form-accent:focus + .icon,
+    .form-accent:hover + .icon {
+      color: var(--accent-color);
     }
-  }
-
-  .form-accent:focus + .icon,
-  .form-accent:hover + .icon {
-    color: var(--accent-color);
   }
 }

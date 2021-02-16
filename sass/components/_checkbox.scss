@@ -1,5 +1,6 @@
 .form-agreement {
   margin-bottom: 31px;
+
   @media screen and (min-width: $desktop) {
     margin-bottom: 30px;
   }
@@ -8,6 +9,7 @@
 .agreement {
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   font-size: 12px;
   line-height: 1.67;
