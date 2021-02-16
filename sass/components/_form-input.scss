@@ -83,7 +83,8 @@
     }
   }
 
-  .form-accent:focus + .icon {
+  .form-accent:focus + .icon,
+  .form-accent:hover + .icon {
     color: var(--accent-color);
   }
 }

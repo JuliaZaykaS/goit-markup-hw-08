@@ -6,37 +6,37 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
-}
 
-.footer-links {
-  text-align: center;
+  &-links {
+    text-align: center;
 
-  @media screen and (min-width: $tablet) {
-    display: flex;
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    justify-content: space-between;
-    text-align: start;
-  }
-
-  .footer-contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media screen and (min-width: $desktop) {
-      align-items: flex-start;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: baseline;
     }
-  }
 
-  .logo-inverse {
-    margin-bottom: 20px;
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+      justify-content: space-between;
+      text-align: start;
+    }
+
+    .footer-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (min-width: $desktop) {
+        align-items: flex-start;
+      }
+    }
+
+    .logo-inverse {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -58,10 +58,6 @@
 
 .join,
 .subscribe {
-  @media screen and (min-width: $desktop) {
-    margin-top: 12px;
-  }
-
   .title-inverse {
     margin-bottom: 20px;
   }
@@ -79,10 +75,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-  }
-
-  .send-icon {
-    margin-left: 10px;
   }
 
   .form-label .email-form {
