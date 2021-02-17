@@ -97,46 +97,4 @@
   }
 }
 
-// .card-with-overlay {
-//   position: relative;
-//   .card-foto {
-//     position: relative;
-//     overflow: hidden;
-//   }
-//   .overlay-text {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
 
-//     font-size: 18px;
-//     line-height: 1.56;
-//     color: var(--main-white-color);
-
-//     padding: 77px 24px;
-
-//     @media screen and (min-width: $tablet) {
-//       padding: 49px 24px;
-//     }
-//     @media screen and (min-width: $desktop) {
-//       padding: 63px 24px;
-//     }
-//   }
-
-//   .card-overlay {
-//     position: absolute;
-//     bottom: -100%;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(33, 150, 243, 0.9);
-
-//     transform: translateY(100%);
-
-//     transition: transform var(--animation-time) var(--timing-function);
-//   }
-//   &:hover .card-overlay,
-//   &:focus .card-overlay {
-//     transform: translateY(-100%);
-//   }
-// }
