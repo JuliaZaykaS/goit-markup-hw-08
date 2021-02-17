@@ -24,10 +24,10 @@
 
 .menu {
   @media screen and (max-width: $tablet - 1) {
-    height: 796px;
+    min-height: 796px;
     background-color: var(--main-white-color);
     text-align: start;
-    padding: 48px 40px 0;
+    padding: 48px 40px;
 
     display: none;
     position: absolute;
@@ -152,6 +152,7 @@
 
 .header-social-network {
   display: flex;
+  flex-wrap: wrap;
   .item:not(:last-child) {
     margin-right: 20px;
   }

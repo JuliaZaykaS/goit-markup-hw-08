@@ -17,10 +17,11 @@
   left: 50%;
   transform: scale(1) translate(-50%, -50%);
   transition: transform var(--animation-time) var(--timing-function);
-  width: 450px;
+  max-width: 450px;
+  width: 100vw;
 
   @media screen and (min-width: $desktop) {
-    width: 528px;
+    max-width: 528px;
   }
 
   background-color: var(--main-white-color);

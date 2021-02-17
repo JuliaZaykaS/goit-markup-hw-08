@@ -330,10 +330,10 @@ h5 {
 
 @media screen and (max-width: 767px) {
   .menu {
-    height: 796px;
+    min-height: 796px;
     background-color: var(--main-white-color);
     text-align: start;
-    padding: 48px 40px 0;
+    padding: 48px 40px;
     display: none;
     position: absolute;
     top: 0;
@@ -495,6 +495,8 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header-social-network .item:not(:last-child) {
@@ -580,7 +582,7 @@ h5 {
 }
 
 .slogan-title {
-  width: 360px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -588,7 +590,7 @@ h5 {
 
 @media screen and (min-width: 1200px) {
   .slogan-title {
-    width: 600px;
+    max-width: 600px;
   }
 }
 
@@ -726,7 +728,8 @@ h5 {
   transition: -webkit-transform var(--animation-time) var(--timing-function);
   transition: transform var(--animation-time) var(--timing-function);
   transition: transform var(--animation-time) var(--timing-function), -webkit-transform var(--animation-time) var(--timing-function);
-  width: 450px;
+  max-width: 450px;
+  width: 100vw;
   background-color: var(--main-white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -735,7 +738,7 @@ h5 {
 
 @media screen and (min-width: 1200px) {
   .modal-window {
-    width: 528px;
+    max-width: 528px;
   }
 }
 
@@ -882,15 +885,9 @@ h5 {
 }
 
 .form .form-button {
-  margin-left: 85px;
-  margin-right: 85px;
-}
-
-@media screen and (min-width: 1200px) {
-  .form .form-button {
-    margin-left: 124px;
-    margin-right: 124px;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form .form-title {
