@@ -36,7 +36,8 @@
         0px 4px 4px rgba(175, 161, 161, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
     .link {
-      display: block;
+      display: flex;
+      flex-direction: column;
       height: 100%;
     }
   }

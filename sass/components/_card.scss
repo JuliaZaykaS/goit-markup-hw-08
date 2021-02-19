@@ -32,6 +32,7 @@
 
     & .advantages-content {
       line-height: 1.71;
+      font-size: 14px;
     }
 
     & .member-content {
@@ -53,10 +54,7 @@
       border: 1px solid var(--card-border-color);
 
       border-top: none;
-
-      @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
-        height: 146px;
-      }
+      flex-grow: 1;
     }
   }
 
