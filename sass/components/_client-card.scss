@@ -1,10 +1,17 @@
 .client {
+  flex-basis: calc(100% / 2 - 30px);
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 6 - 30px);
+  }
   .client-link {
     display: block;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 210px;
+
     height: 90px;
     color: var(--icon-color);
 
@@ -12,14 +19,6 @@
     border-radius: 4px;
 
     transition: color var(--animation-time) var(--timing-function);
-
-    @media screen and (min-width: $tablet) {
-      width: 226px;
-    }
-
-    @media screen and (min-width: $desktop) {
-      width: 170px;
-    }
 
     &:hover,
     &:focus {

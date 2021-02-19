@@ -2,27 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: -30px;
+  margin-bottom: -30px;
 
   .client {
-    @media screen and (max-width: $desktop - 1) {
-      margin-bottom: 30px;
-    }
-  }
-
-  @media screen and (min-width: $mobile) and (max-width: $tablet - 1) {
-    .client:nth-child(2n + 1) {
-      margin-right: 30px;
-    }
-  }
-
-  @media screen and (min-width: $tablet) {
-    .client:not(:nth-child(3n)) {
-      margin-right: 30px;
-    }
-  }
-  @media screen and (min-width: $desktop) {
-    .client:not(:last-child) {
-      margin-right: 30px;
-    }
+    margin-bottom: 30px;
+    margin-left: 30px;
   }
 }

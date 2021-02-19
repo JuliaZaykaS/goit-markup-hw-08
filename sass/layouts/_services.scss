@@ -4,14 +4,9 @@
   @media screen and (min-width: $desktop) {
     display: block;
     z-index: 1;
-    // & .list {
-    //   display: flex;
-    // }
+
     .service-card {
       position: relative;
-      // &:not(:last-child) {
-      //   margin-right: 30px;
-      // }
     }
     .service-title {
       position: absolute;

@@ -1078,14 +1078,13 @@ h5 {
 
 .card-content .project-content {
   color: var(--main-text-color);
-  height: 110px;
   padding: 20px 24px;
   line-height: 1.87;
   border: 1px solid var(--card-border-color);
   border-top: none;
 }
 
-@media screen and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .card-content .project-content {
     height: 146px;
   }
@@ -1236,29 +1235,31 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
-@media screen and (max-width: 1199px) {
-  .regular-clients .client {
-    margin-bottom: 30px;
-  }
+.regular-clients .client {
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .regular-clients .client:nth-child(2n + 1) {
-    margin-right: 30px;
-  }
+.client {
+  -ms-flex-preferred-size: calc(100% / 2 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
 }
 
 @media screen and (min-width: 768px) {
-  .regular-clients .client:not(:nth-child(3n)) {
-    margin-right: 30px;
+  .client {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .regular-clients .client:not(:last-child) {
-    margin-right: 30px;
+  .client {
+    -ms-flex-preferred-size: calc(100% / 6 - 30px);
+        flex-basis: calc(100% / 6 - 30px);
   }
 }
 
@@ -1273,25 +1274,12 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 210px;
   height: 90px;
   color: var(--icon-color);
   border: 1px solid currentColor;
   border-radius: 4px;
   -webkit-transition: color var(--animation-time) var(--timing-function);
   transition: color var(--animation-time) var(--timing-function);
-}
-
-@media screen and (min-width: 768px) {
-  .client .client-link {
-    width: 226px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client .client-link {
-    width: 170px;
-  }
 }
 
 .client .client-link:hover, .client .client-link:focus {
@@ -1464,12 +1452,6 @@ h5 {
 .projects .project-card:hover, .projects .project-card:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(175, 161, 161, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(175, 161, 161, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .projects .project-card .project-content {
-    height: 146px;
-  }
 }
 
 .projects .project-title {

@@ -18,7 +18,6 @@
   width: 100%;
 
   @media screen and (min-width: $tablet) {
-    // flex-basis: calc((100% - 1 * 30px) / 2);
     flex-basis: calc(100% / 2 - 30px);
   }
 
@@ -49,13 +48,12 @@
 
     & .project-content {
       color: var(--main-text-color);
-      height: 110px;
       padding: 20px 24px;
       line-height: 1.87;
       border: 1px solid var(--card-border-color);
       border-top: none;
 
-      @media screen and (min-width: $tablet) and (max-width: $tablet - 1) {
+      @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
         height: 146px;
       }
     }
