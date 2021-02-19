@@ -13,14 +13,12 @@
     @media screen and (min-width: $tablet) {
       display: flex;
       align-items: baseline;
-    }
-
-    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
       flex-wrap: wrap;
       justify-content: center;
     }
 
     @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
       justify-content: space-between;
       text-align: start;
     }
@@ -64,8 +62,12 @@
 }
 
 .footer-contacts {
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+  @media screen and (min-width: $tablet) {
     margin-right: 165px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 0;
   }
 }
 

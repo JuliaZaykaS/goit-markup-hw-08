@@ -80,14 +80,15 @@
     flex-direction: column-reverse;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-direction: column;
     margin-left: auto;
 
-    & .item:not(:last-child) {
+    & .item {
       margin-bottom: 10px;
     }
+
     & .item:last-child {
       margin-bottom: 0;
     }
@@ -98,6 +99,9 @@
     flex-direction: row;
     align-items: center;
     margin-left: auto;
+    & .item {
+      margin-bottom: 0;
+    }
     & .item:not(:last-child) {
       margin-right: 50px;
     }
