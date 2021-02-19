@@ -1015,6 +1015,28 @@ h5 {
   border-color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .card-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+.card-set .card {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-set .card {
+    margin-left: 30px;
+  }
+}
+
 .card {
   background-color: var(--main-white-color);
   width: 100%;
@@ -1022,15 +1044,15 @@ h5 {
 
 @media screen and (min-width: 768px) {
   .card {
-    -ms-flex-preferred-size: calc((100% - 1 * 30px) / 2);
-        flex-basis: calc((100% - 1 * 30px) / 2);
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .card {
-    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 4);
-        flex-basis: calc((100% - 3 * 30px) / 4);
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
   }
 }
 
@@ -1125,33 +1147,8 @@ h5 {
 @media screen and (min-width: 1200px) {
   .project-card,
   .service-card {
-    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 3);
-        flex-basis: calc((100% - 2 * 30px) / 3);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .advantages-catalog {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .advantages-catalog .advantage-item:nth-child(2n + 1) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages-catalog .advantage-item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .advantage-item {
-    margin-bottom: 30px;
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
   }
 }
 
@@ -1190,16 +1187,8 @@ h5 {
     display: block;
     z-index: 1;
   }
-  .services .list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .services .service-card {
     position: relative;
-  }
-  .services .service-card:not(:last-child) {
-    margin-right: 30px;
   }
   .services .service-title {
     position: absolute;
@@ -1217,37 +1206,12 @@ h5 {
   background-color: var(--background-button-color);
 }
 
-@media screen and (max-width: 1199px) {
-  .team-card {
-    margin-bottom: 30px;
-  }
-}
-
 .team-member {
   margin-bottom: 10px;
 }
 
 .team-specialization {
   margin-bottom: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .members-of-team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .members-of-team .team-card:nth-child(2n + 1) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .members-of-team .team-card:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
 .social-network-list {
@@ -1490,16 +1454,6 @@ h5 {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 768px) {
-  .projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
 .projects .project-card {
   -webkit-transition: -webkit-box-shadow var(--animation-time) var(--timing-function);
   transition: -webkit-box-shadow var(--animation-time) var(--timing-function);
@@ -1508,37 +1462,13 @@ h5 {
 }
 
 .projects .project-card:hover, .projects .project-card:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-@media screen and (max-width: 1199px) {
-  .projects .project-card:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .projects .project-card {
-    margin-right: 30px;
-  }
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(175, 161, 161, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(175, 161, 161, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .projects .project-card .project-content {
     height: 146px;
-  }
-  .projects .project-card:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .projects .project-card {
-    margin-bottom: 30px;
-  }
-  .projects .project-card:nth-child(3n) {
-    margin-right: 0;
   }
 }
 

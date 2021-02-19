@@ -1,11 +1,11 @@
 .team {
   background-color: var(--background-button-color);
 
-  &-card {
-    @media screen and (max-width: $desktop - 1) {
-      margin-bottom: 30px;
-    }
-  }
+  // &-card {
+  //   @media screen and (max-width: $desktop - 1) {
+  //     margin-bottom: 30px;
+  //   }
+  // }
 
   &-member {
     margin-bottom: 10px;
@@ -17,18 +17,18 @@
 }
 
 .members-of-team {
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
+  // @media screen and (min-width: $tablet) {
+  //   display: flex;
+  //   flex-wrap: wrap;
 
-    .team-card:nth-child(2n + 1) {
-      margin-right: 30px;
-    }
-  }
+  //   .team-card:nth-child(2n + 1) {
+  //     margin-right: 30px;
+  //   }
+  // }
 
-  @media screen and (min-width: $desktop) {
-    .team-card:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
+  // @media screen and (min-width: $desktop) {
+  //   .team-card:not(:last-child) {
+  //     margin-right: 30px;
+  //   }
+  // }
 }
