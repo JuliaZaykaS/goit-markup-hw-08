@@ -112,25 +112,33 @@
       <!--Фильтр-->
       <section class="portfolio section-padding">
         <div class="container">
-          <ul class="portfolio-buttons list">
+          <ul class="portfolio-buttons list" data-controls="controls">
             <li class="pf-button">
-              <button type="button" class="button filter-button">Все</button>
+              <button
+                type="button"
+                class="button filter-button"
+                data-control="all"
+              >
+                Все
+              </button>
             </li>
             <li class="pf-button">
-              <button type="button" class="button filter-button">
+              <button type="button" class="button" data-control="web-site">
                 Веб-сайты
               </button>
             </li>
             <li class="pf-button">
-              <button type="button" class="button filter-button">
+              <button type="button" class="button" data-control="app">
                 Приложения
               </button>
             </li>
             <li class="pf-button">
-              <button type="button" class="button filter-button">Дизайн</button>
+              <button type="button" class="button" data-control="design">
+                Дизайн
+              </button>
             </li>
             <li class="pf-button">
-              <button type="button" class="button filter-button">
+              <button type="button" class="button" data-control="marketing">
                 Маркетинг
               </button>
             </li>
@@ -139,8 +147,11 @@
           <!--/Фильтр-->
 
           <!--Проекты-->
-          <ul class="projects list card-set">
-            <li class="card card-content project-card card-with-overlay">
+          <ul class="projects list card-set" data-panels="panels">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="web-site"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -167,7 +178,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="design"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -195,7 +209,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="app"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -221,7 +238,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="marketing"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -246,7 +266,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="app"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -272,7 +295,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="web-site"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -298,7 +324,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="design"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -324,7 +353,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="marketing"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -350,7 +382,10 @@
                 </div>
               </a>
             </li>
-            <li class="card card-content project-card card-with-overlay">
+            <li
+              class="card card-content project-card card-with-overlay"
+              data-panel="app"
+            >
               <a class="link" href="#">
                 <div class="card-foto">
                   <img
@@ -407,7 +442,14 @@
               <li class="social-network">
                 <a
                   href="#"
-                  class="button button-round button-round-inverse button-round-inverse social-link company-social-link"
+                  class="
+                    button
+                    button-round
+                    button-round-inverse
+                    button-round-inverse
+                    social-link
+                    company-social-link
+                  "
                   aria-label="иконка Инстаграм"
                 >
                   <svg class="icon social-icon" width="20" height="20">
@@ -420,7 +462,11 @@
               <li class="social-network">
                 <a
                   href="#"
-                  class="button button-round button-round-inverse social-link company-social-link"
+                  class="
+                    button button-round button-round-inverse
+                    social-link
+                    company-social-link
+                  "
                   aria-label="иконка Твиттер"
                 >
                   <svg class="icon social-icon" width="20" height="20">
@@ -433,7 +479,11 @@
               <li class="social-network">
                 <a
                   href="#"
-                  class="button button-round button-round-inverse social-link company-social-link"
+                  class="
+                    button button-round button-round-inverse
+                    social-link
+                    company-social-link
+                  "
                   aria-label="иконка Фейсбук"
                 >
                   <svg class="icon social-icon" width="20" height="20">
@@ -446,7 +496,11 @@
               <li class="social-network">
                 <a
                   href="#"
-                  class="button button-round button-round-inverse social-link company-social-link"
+                  class="
+                    button button-round button-round-inverse
+                    social-link
+                    company-social-link
+                  "
                   aria-label="иконка ЛинкедИн"
                 >
                   <svg class="icon social-icon" width="20" height="20">
@@ -486,6 +540,7 @@
       </div>
     </footer>
     <!--/Подвал с контактами-->
-    <script src="./js/menu.js"></script>
+    <script src="./js/menu.js" type="module"></script>
+    <script src="./js/filter.js" type="module"></script>
   </body>
 </html>
