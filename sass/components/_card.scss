@@ -109,3 +109,11 @@
     flex-basis: calc(100% / 3 - 30px);
   }
 }
+
+.hidden-card {
+  display: none;
+}
+
+.active-card {
+  display: block;
+}

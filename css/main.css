@@ -1160,6 +1160,14 @@ h5 {
   }
 }
 
+.hidden-card {
+  display: none;
+}
+
+.active-card {
+  display: block;
+}
+
 .advantage-item .advantages-title {
   margin-bottom: 10px;
 }
